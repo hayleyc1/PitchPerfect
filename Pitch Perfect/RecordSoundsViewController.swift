@@ -8,7 +8,8 @@
 
 import UIKit
 import AVFoundation
-class RecordSoundsViewController: UIViewController {
+
+class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
 
     @IBOutlet weak var recordButton: UIButton!
     @IBOutlet weak var recordingLabel: UILabel!
@@ -54,11 +55,18 @@ class RecordSoundsViewController: UIViewController {
         session.setCategory(AVAudioSessionCategoryPlayAndRecord, error: nil)
         
         audioRecorder = AVAudioRecorder(URL: filePath!, settings: nil, error: nil)
+        audioRecorder.delegate = self
         audioRecorder.meteringEnabled = true
         audioRecorder.prepareToRecord()
         audioRecorder.record()
-        
-        
+    
+    
+    
+    }
+    
+    func AVAudioRecorderDidFinishRecording(recorder: AVAudioRecorder!, successfully flag: Bool)
+    {
+    
         //TODO: Record the user's voice
         println("in recordAudio")
     }
@@ -66,6 +74,6 @@ class RecordSoundsViewController: UIViewController {
     override func viewWillAppear(animated: Bool) {
         //make stop button disappear
         stopButton.hidden = true
-        recordButton.enabled = true 
+        recordButton.enabled = true
     }
 }
