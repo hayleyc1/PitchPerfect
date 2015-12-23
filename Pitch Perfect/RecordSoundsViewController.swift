@@ -25,7 +25,7 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+   
     
 
      func stopAudio(sender: UIButton) {
@@ -63,10 +63,8 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     
     
     }
-    
-    func AVAudioRecorderDidFinishRecording(recorder: AVAudioRecorder!, successfully flag: Bool)
-    {
-    
+        func audioRecorderDidFinsihRecording(recorder: AVAudioRecorder!, successfully flag: Bool)
+        {
         //TODO: Record the user's voice
         println("in recordAudio")
     }
@@ -76,4 +74,4 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
         stopButton.hidden = true
         recordButton.enabled = true
     }
-}
+    };
