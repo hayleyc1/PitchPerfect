@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="25K-nD-FCY">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="25K-nD-FCY">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
         <!--Play Sounds View Controller-->
@@ -117,8 +117,11 @@
                                 <state key="normal" image="stopbutton">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="150" y="410" width="100" height="100"/>
+                                </variation>
                                 <connections>
-                                    <action selector="stopAudio:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="4lo-WH-wNh"/>
+                                    <action selector="stopAudio:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="QOb-M7-21r"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -139,7 +142,7 @@
                         <outlet property="recordButton" destination="x30-nu-mmQ" id="pW4-l0-TCc"/>
                         <outlet property="recordinginProgress" destination="ygw-nu-tUm" id="cKz-0g-AXC"/>
                         <outlet property="stopButton" destination="axn-Be-UFT" id="eRh-df-c6U"/>
-                        <segue destination="ZsE-Xu-XTt" kind="show" identifier="stopRecording" id="Pjc-bd-r4t"/>
+                        <segue destination="ZsE-Xu-XTt" kind="show" identifier="stopAudio" id="0Ze-zh-sd2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
